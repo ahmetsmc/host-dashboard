@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <title>Hesabım</title>
+</head>
+<body>
+
+<main class="app">
+    <div class="app-menu">
+        <div class="logo-wrapper">
+            <div class="logo">
+                <a href="assets">
+                    <img src="assets/images/logo.png" alt="" loading="lazy">
+                </a>
+            </div>
+            <div class="author">
+                <div class="username">
+                    <p><span>Hoşgeldin,</span> Kullanıcı Adı</p>
+                    <div class="languages">
+                        <span class="active">Türkçe <i class="fas fa-chevron-down"></i></span>
+                        <ul>
+                            <li><a href="">Türkçe</a></li>
+                            <li><a href="">English</a></li>
+                            <li><a href="">български</a></li>
+                            <li><a href="">español</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href=""><i class="fas fa-sign-out"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="search-box">
+            <form action="" method="POST">
+                <label for="search"><i class="fas fa-search"></i></label>
+                <input type="text" placeholder="Arama yapın.." id="search" required>
+            </form>
+        </div>
+        <div class="menu">
+            <aside>
+                <strong class="aside-title">Menü</strong>
+                <ul>
+                    <li>
+                        <a href="domains.html"> <i class="fas fa-globe"></i> <span>Alan Adları</span> </a>
+                        <ul>
+                            <li><a href="domains-sub.html"> <i class="fas fa-list"></i> <span>Alt Alan Adları</span>
+                            </a></li>
+                            <li><a href="domains-dns.html"> <i class="fas fa-typewriter"></i> <span>DNS Ayarları</span>
+                            </a></li>
+                            <li><a href="domains-redirects.html"> <i class="fas fa-directions"></i>
+                                <span>Yönlendirmeler</span> </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="file-manager.html"> <i class="fas fa-folder"></i> <span>Dosya Yöneticisi</span> </a>
+                        <ul>
+                            <li><a href="file-manager-usage.html"> <i class="fas fa-browser"></i>
+                                <span>Disk Kullanımı</span> </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="databases.html"> <i class="fas fa-database"></i> <span>Veritabanları</span> </a>
+                        <ul>
+                            <li><a href="databases-remote.html"> <i class="fas fa-server"></i> <span>Uzak MYSQL</span>
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="emails.html"> <i class="fas fa-envelope"></i> <span>E Posta Hesapları</span> </a>
+                        <ul>
+                            <li><a href="emails-forwards.html"> <i class="fas fa-location-arrow"></i>
+                                <span>İleticiler</span> </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="users.html"> <i class="fas fa-users"></i> <span>Kullanıcı Yönetimi</span> </a></li>
+                    <li>
+                        <a href="server-settings.html"> <i class="fas fa-hdd"></i> <span>Sunucu Ayarları</span> </a>
+                        <ul>
+                            <li><a href="server-settings-php.html"> <i class="fab fa-php"></i> <span>PHP Ayarları</span>
+                            </a></li>
+                            <li><a href="server-settings-errors.html"> <i class="fas fa-clipboard-list"></i> <span>Hata Kayıtları</span>
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+            <aside>
+                <strong class="aside-title">Hesabım</strong>
+                <ul>
+                    <li><a href="profile.html"> <i class="fas fa-user"></i> <span>Bilgilerimi Güncelle</span> </a></li>
+                    <li><a href="profile-password.html"> <i class="fas fa-key"></i> <span>Şifre Değiştir</span> </a>
+                    </li>
+                    <li><a href="login.html"> <i class="fas fa-sign-out"></i> <span>Çıkış Yap</span> </a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    <div class="app-content">
+        <div class="content">
+            <section class="section margin-top-clear">
+                <header class="section-header">
+                    <div class="text">
+                        <i class="fas fa-typewriter"></i>
+                        <strong class="title">DNS Ayarları</strong>
+                    </div>
+                    <div class="button">
+                        <a href="" class="btn success" id="create-row"><i class="fas fa-plus"></i> Yeni Kayıt</a>
+                    </div>
+                </header>
+                <div class="dns-manager">
+                    <div class="value-row header">
+                        <div class="col">Başlık</div>
+                        <div class="col">TTL</div>
+                        <div class="col">Tip</div>
+                        <div class="col">Değer</div>
+                        <div class="col">İşlemler</div>
+                    </div>
+                    <div class="value-row">
+                        <div class="col">domain.com</div>
+                        <div class="col">14400</div>
+                        <div class="col"><span class="status-badge warning">A</span></div>
+                        <div class="col" contenteditable="true">25.345.235.11</div>
+                        <div class="col">
+                            <a href="" class="btn warning icon-btn" title="Düzenle"> <i class="fas fa-edit"></i> </a>
+                            <a href="" class="btn danger icon-btn" title="Kaldır"> <i class="fas fa-trash"></i> </a>
+                        </div>
+                    </div>
+                    <div class="value-row">
+                        <div class="col">mail.domain.com</div>
+                        <div class="col">14400</div>
+                        <div class="col"><span class="status-badge warning">MX</span></div>
+                        <div class="col" contenteditable="true">25.345.235.11</div>
+                        <div class="col">
+                            <a href="" class="btn warning icon-btn" title="Düzenle"> <i class="fas fa-edit"></i> </a>
+                            <a href="" class="btn danger icon-btn" title="Kaldır"> <i class="fas fa-trash"></i> </a>
+                        </div>
+                    </div>
+                    <div class="value-row">
+                        <div class="col">domain.com</div>
+                        <div class="col">14400</div>
+                        <div class="col"><span class="status-badge warning">TXT</span></div>
+                        <div class="col" contenteditable="true">v=spf1 redirect=_spf.yandex.net</div>
+                        <div class="col">
+                            <a href="" class="btn warning icon-btn" title="Düzenle"> <i class="fas fa-edit"></i> </a>
+                            <a href="" class="btn danger icon-btn" title="Kaldır"> <i class="fas fa-trash"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="site-footer">
+                <nav>
+                    <a href="">Kullanım Şartları</a>
+                    <a href="">Destek Forumları</a>
+                    <a href="">Destek</a>
+                </nav>
+                <p><a href="">Pigasoft</a> tarafından hazırlandı.</p>
+            </footer>
+        </div>
+        <div class="side-widgets">
+            <aside class="widget">
+                <strong class="widget-title">Genel Bilgiler</strong>
+                <div class="widget-list">
+                    <ul>
+                        <li>
+                            <p class="item-title">Geçerli kullanıcı adı:</p>
+                            <p class="item-value">alanadi.com</p>
+                        </li>
+                        <li>
+                            <p class="item-title">Birincil etki alanı:</p>
+                            <p class="item-value">alanadi.com</p>
+                        </li>
+                        <li>
+                            <p class="item-title">IP Adresi:</p>
+                            <p class="item-value">57.25.89.255</p>
+                        </li>
+                        <li>
+                            <p class="item-title">SSL Durumu</p>
+                            <span class="status-badge success">Aktif</span>
+                            <span class="status-badge warning">Pasif</span>
+                            <span class="status-badge danger">Hata</span>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <aside class="widget statistics">
+                <strong class="widget-title">İstatistikler</strong>
+                <div class="widget-list">
+                    <ul>
+                        <li>
+                            <p class="item-title">Depolama alanı:</p>
+                            <p class="item-value"><span class="muted-text">25 MB</span> / 1 GB</p>
+                            <div class="progress-bar">
+                                <div class="bar success" style="width: 20%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="item-title">Depolama alanı:</p>
+                            <p class="item-value"><span class="muted-text">25 MB</span> / 1 GB</p>
+                            <div class="progress-bar">
+                                <div class="bar warning" style="width: 50%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="item-title">Depolama alanı:</p>
+                            <p class="item-value"><span class="muted-text">25 MB</span> / 1 GB</p>
+                            <div class="progress-bar">
+                                <div class="bar danger" style="width: 80%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="item-title">Depolama alanı:</p>
+                            <p class="item-value"><span class="muted-text">25 MB</span> / 1 GB</p>
+                            <div class="progress-bar">
+                                <div class="bar warning" style="width: 40%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="item-title">Depolama alanı:</p>
+                            <p class="item-value"><span class="muted-text">25 MB</span> / 1 GB</p>
+                            <div class="progress-bar">
+                                <div class="bar warning" style="width: 55%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="item-title">Depolama alanı:</p>
+                            <p class="item-value"><span class="muted-text">25 MB</span> / 1 GB</p>
+                            <div class="progress-bar">
+                                <div class="bar warning" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="item-title">Depolama alanı:</p>
+                            <p class="item-value"><span class="muted-text">25 MB</span> / 1 GB</p>
+                            <div class="progress-bar">
+                                <div class="bar success" style="width: 15%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="assets/app.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#create-row").click(function () {
+            event.preventDefault();
+            var row = `<div class="value-row new-row">
+                        <div class="col" contenteditable="" onclick="setCol($(this))" style="opacity: .5">Alan adını yazın</div>
+                        <div class="col" contenteditable="">14400</div>
+                        <div class="col">
+                            <select style="width: 100%;">
+                                <option value="">Tip</option>
+                                <option value="">MX</option>
+                                <option value="">A</option>
+                                <option value="">TXT</option>
+                                <option value="">CNAME</option>
+                            </select>
+                        </div>
+                        <div class="col" contenteditable="true">Değer</div>
+                        <div class="col">
+                            <a href="" class="btn success icon-btn save-button" title="Kaydet"> <i class="fas fa-save"></i> </a>
+                        </div>
+                    </div>`;
+            $(".dns-manager").append(row);
+        })
+
+        $(document).on('click', '.save-button', function (){
+            event.preventDefault();
+            var row = $(this).parent().parent();
+            var data = {
+              title: row.find('.col:nth-child(1)').text().replaceAll(" ", ""),
+              ttl: row.find('.col:nth-child(2)').text().replaceAll(" ", ""),
+              type: row.find('.col:nth-child(3) select option:selected').text(),
+              value: row.find('.col:nth-child(4)').text().replaceAll(" ", ""),
+            };
+
+            Swal.fire({
+                title: 'Yeni kayıt eklendi',
+                text: JSON.stringify(data),
+                icon: 'success',
+                confirmButtonText: 'Tamam',
+            })
+        });
+    })
+
+    function setCol(col) {
+        col.css('opacity', 1);
+        col.text("");
+    }
+</script>
+
+</body>
+</html>
